@@ -1,0 +1,43 @@
+#!/bin/bash
+
+rhel_conn="ssh user@192.168.1.77"
+ubuntu_conn="ssh user@192.168.1.78"
+my_ping="sc4n"
+
+my_menu="
+	echo -e	Connect to server
+		\n1)	Rhel server
+		\n2)	Ubuntu server
+		\n3)	Ping network
+		\nq)	exit
+"
+
+while :
+do
+	clear
+	${my_menu}
+	echo 'Select your option:'
+	read my_option
+
+	case ${my_option} in
+
+		1) 	
+			clear
+			${rhel_conn}
+			;;
+		2) 
+			clear
+			${ubuntu_conn}
+			;;
+		3)	
+			${my_ping}
+			;;
+		q)	
+			break
+			;;
+		*)
+			echo 'Wrong Option!'
+			;;
+esac
+done
+echo 'Bye!!'
