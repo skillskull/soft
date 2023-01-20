@@ -2,13 +2,15 @@
 
 rhel_conn="ssh user@192.168.1.77"
 ubuntu_conn="ssh user@192.168.1.78"
-my_ping="sc4n"
+my_ping="sc4n"i
+info_gathering="gath3r"
 
 my_menu="
 	echo -e	Connect to server
 		\n1)	Rhel server
 		\n2)	Ubuntu server
 		\n3)	Ping network
+		\n4)	Information gathering
 		\nq)	exit
 "
 
@@ -32,12 +34,15 @@ do
 		3)	
 			${my_ping}
 			;;
+		4)
+			${info_gathering}
+			;;
 		q)	
 			break
 			;;
 		*)
 			echo 'Wrong Option!'
 			;;
-esac
+	esac
 done
 echo 'Bye!!'
