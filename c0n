@@ -2,7 +2,7 @@
 
 rhel_conn="ssh user@192.168.1.77"
 ubuntu_conn="ssh user@192.168.1.78"
-my_ping="sc4n"i
+my_ping="sc4n"
 info_gathering="gath3r"
 
 my_menu="
@@ -17,6 +17,7 @@ my_menu="
 while :
 do
 	clear
+	bash cheems.sh
 	${my_menu}
 	echo 'Select your option:'
 	read my_option
